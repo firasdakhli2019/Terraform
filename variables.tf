@@ -25,7 +25,7 @@ variable "web_app_name" {
 variable "tenant_id" {
   description = "Tenant id of the Azure subscription. This can typically be found when switching directories"
   type        = string
-  default     = "76a2ae5a-9f00-4f6b-95ed-5d33d77c4d61"
+  default     = ""
 }
 
 
