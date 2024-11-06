@@ -10,28 +10,28 @@ locals {
 
 
 resource "azurerm_storage_account" "qmtfupskilling" {
-  access_tier                     = "Hot"
-  account_kind                    = "StorageV2"
-  account_replication_type        = "LRS"
-  account_tier                    = "Standard"
-  allow_nested_items_to_be_public = true
-  cross_tenant_replication_enabled = true
-  default_to_oauth_authentication  = false
+  access_tier                       = "Hot"
+  account_kind                      = "StorageV2"
+  account_replication_type          = "LRS"
+  account_tier                      = "Standard"
+  allow_nested_items_to_be_public   = true
+  cross_tenant_replication_enabled  = true
+  default_to_oauth_authentication   = false
   infrastructure_encryption_enabled = false
   is_hns_enabled                    = false
-  location                      = var.location
-  min_tls_version               = "TLS1_2"
-  name                          = var.storage_account_name
-  nfsv3_enabled                 = false
-  public_network_access_enabled = true
-  queue_encryption_key_type     = "Service"
-  resource_group_name           = var.resource_group
-  sftp_enabled                  = false
-  shared_access_key_enabled     = true
-  table_encryption_key_type     = "Service"
-  tags                          = local.tags
+  location                          = var.location
+  min_tls_version                   = "TLS1_2"
+  name                              = var.storage_account_name
+  nfsv3_enabled                     = false
+  public_network_access_enabled     = true
+  queue_encryption_key_type         = "Service"
+  resource_group_name               = var.resource_group
+  sftp_enabled                      = false
+  shared_access_key_enabled         = true
+  table_encryption_key_type         = "Service"
+  tags                              = local.tags
   blob_properties {
-    change_feed_enabled = false
+    change_feed_enabled      = false
     last_access_time_enabled = false
     versioning_enabled       = false
     container_delete_retention_policy {
